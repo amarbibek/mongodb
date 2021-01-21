@@ -21,7 +21,7 @@ describe("Middleware", () => {
  
     });
 
-    it.only("users cleanup dangling blogposts on remove", (done) => {
+    it("users cleanup dangling blogposts on remove", (done) => {
         joe.remove()
             .then(() => {
                 return BlogPost.count();                
